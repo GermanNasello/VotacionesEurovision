@@ -35,26 +35,27 @@ README.md
 ```bash
 git clone https://github.com/tu-usuario/eurovision.git
 cd eurovision
-
+```
 2. Configuración del Backend (Flask)
 🔹 Instalar dependencias
 
 Dirígete a la carpeta /Backend y usa pip para instalar las dependencias necesarias:
 
+```bash
 cd Backend
 pip install -r requirements.txt
-
+```
     Si no tienes un archivo requirements.txt, puedes crearlo con los siguientes comandos:
-
+```bash
 pip install flask flask-cors
 pip freeze > requirements.txt
-
+```
 🔹 Ejecutar el servidor Flask
 
 Una vez que las dependencias estén instaladas, puedes ejecutar el backend con:
-
+```bash
 python app.py
-
+```
 Esto iniciará el servidor en http://0.0.0.0:8080, accesible en tu red local. Desde cualquier dispositivo de tu red, puedes acceder a la API en:
 
 http://TU_IP_LOCAL:8080
@@ -63,12 +64,13 @@ http://TU_IP_LOCAL:8080
 🔹 Instalar dependencias
 
 Dirígete a la carpeta /Frontend y usa npm para instalar las dependencias necesarias:
-
+```bash
 cd Frontend
 npm install
-
+```
 🔹 Ejecutar el servidor Angular
 
 Para ejecutar la aplicación Angular, usa el siguiente comando:
-
+```bash
 ng serve --host 0.0.0.0
+```
