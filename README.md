@@ -52,7 +52,6 @@ Una vez que las dependencias estén instaladas, puedes ejecutar el backend con:
 ```bash
 python app.py
 ```
-Esto iniciará el servidor en http://0.0.0.0:8080, accesible en tu red local. Desde cualquier dispositivo de tu red, puedes acceder a la API en:
 
 
 3. Configuración del Frontend (Angular)
@@ -69,3 +68,6 @@ Para ejecutar la aplicación Angular, usa el siguiente comando:
 ```bash
 ng serve --host 0.0.0.0
 ```
+Esto abrirá la pagina web en el puerto 4200:
+
+http://<TU_IP>:4200
