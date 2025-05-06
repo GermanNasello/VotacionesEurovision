@@ -18,9 +18,11 @@ Antes de empezar, asegúrate de tener instalados los siguientes programas:
 ## 🧱 Estructura del proyecto
 
 /Frontend
+
 └── Angular aplicación (interfaz de usuario)
 
 /Backend
+
 └── Backend en Flask (API para gestionar votaciones)
 
 README.md
