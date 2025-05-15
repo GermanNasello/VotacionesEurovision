@@ -1,0 +1,25 @@
+<div class="votaciones-container">
+  <h1>{{ paises[indiceActual] }}</h1>
+
+  <img [src]="'assets/' + paises[indiceActual] + '.png'" class="bandera" />
+
+  <div class="input-contenedor">
+    <input type="number" [(ngModel)]="nota" min="0" max="10" class="input-nota"/>
+  </div>
+
+  <div class="navegacion">
+    <button (click)="navegar(-1)" [disabled]="indiceActual === 0" class="btn btn-anterior">Anterior</button>
+    <button (click)="navegar(1)" [disabled]="indiceActual === paises.length - 1" class="btn btn-siguiente">Siguiente</button>
+  </div>
+
+  <div class="boton-estadisticas">
+    <button (click)="irAEstadisticas()" class="btn btn-estadisticas">Ver estadísticas del hogar</button>
+  </div>
+  <div *ngIf="error" style="color: red; font-size: 12px; margin-top: 5px;">
+    No se pudo enviar el voto. Intenta de nuevo.
+  </div>
+  <div *ngIf="success" style="color: green; font-size: 12px; margin-top: 5px;">
+    Voto emitido
+  </div>
+  
+</div>

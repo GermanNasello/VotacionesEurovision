@@ -1,0 +1,36 @@
+
+<div *ngIf="cargando">Cargando resultados...</div>
+<div *ngIf="error">{{ error }}
+    
+</div>
+
+<div *ngIf="!cargando && !error">
+  <h2>Resumen de votaciones para {{ hogar }}</h2>
+
+  <div class="boton-estadisticas">
+    <button (click)="irAVotaciones()" class="btn btn-estadisticas">Ver estadísticas por pais</button>
+  </div>
+  <canvas baseChart
+    [data]="{ labels: chartLabels, datasets: [{ data: chartData, label: 'Media de votos' }] }"
+    [type]="chartType"
+    [options]="chartOptions">
+  </canvas>
+
+  <table style="margin-top: 30px;">
+    <thead>
+      <tr>
+        <th>País</th>
+        <th>Media</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resultado of resultados">
+        <td>{{ resultado[0] }}</td>
+        <td>{{ resultado[1] }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="boton-estadisticas">
+    <button (click)="votaciones()" class="btn btn-estadisticas">Volver a votaciones</button>
+  </div>
+</div>

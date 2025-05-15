@@ -1,0 +1,18 @@
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f4f4f4;">
+  <h1 style="color: #333; font-family: Arial, sans-serif;">Selecciona tu hogar</h1>
+  <div *ngIf="!hogarSeleccionado">
+    <button (click)="seleccionarHogar('Trevilucius')" style="margin: 10px; padding: 10px 20px; font-size: 18px;">Trevilucius</button>
+    <button (click)="seleccionarHogar('Casa Belen')" style="margin: 10px; padding: 10px 20px; font-size: 18px;">Casa Belen
+
+    </button>
+  </div>
+  <div *ngIf="hogarSeleccionado">
+    <h2 style="color: #333;">Seleccionaste: {{ hogar }}</h2>
+    <input [(ngModel)]="nombre" placeholder="Ingresa tu nombre"
+           style="padding: 10px; font-size: 18px; width: 250px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 15px;"/>
+    <button (click)="guardarNombre()"
+            style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">
+      Entrar
+    </button>
+  </div>
+</div>
